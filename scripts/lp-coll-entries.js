@@ -50,7 +50,10 @@ function processEntry(entry, app, callback) {
   if (kind == "playlist") {
     const playlist = app.playlists.byId(id);
     title = playlist.name();
-    subtitle = "";
+    subtitle = "Playlist";
+    icon = {
+      path: playlist.artworkURL(),
+    };
   } else if (kind == "album") {
     const album = app.albums.byId(id);
     title = album.name();

@@ -16,9 +16,7 @@ function searchAndFormatAlbums(query) {
   console.log("Found " + matches.length + " matches");
 
   const formattedResults = [];
-  for (var i in matches.slice(0, 20)) {
-    const entry = matches[i];
-
+  for (const entry of matches.slice(0, 20)) {
     const result = processEntry(entry, app, (baseResult) => {
       return {
         ...baseResult,
@@ -59,7 +57,10 @@ function processEntry(entry, app, callback) {
   if (kind == "playlist") {
     const playlist = app.playlists.byId(id);
     title = playlist.name();
-    subtitle = "";
+    subtitle = "Playlist";
+    icon = {
+      path: playlist.artworkURL(),
+    };
   } else if (kind == "album") {
     const album = app.albums.byId(id);
     title = album.name();
