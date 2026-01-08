@@ -1,6 +1,7 @@
 # Alfred Workflow for Longplay for Mac
 
 - App website: [`longplay.rocks`](https://longplay.rocks)
+- Workflow discussion: [Alfred forum topic](https://www.alfredforum.com/topic/23606-longplay/)
 
 ## Download
 
